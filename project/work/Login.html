@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/button_light.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link href="../bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <style>
+        @media screen and (max-width: 890px){
+             video{
+            position: fixed;
+            display: block;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            opacity: 0.86;
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/
+            /*filter:grayscale(100%); //背景灰度设置*/
+            z-index:-11
+        }
+
+        }
+       @media screen and (min-width: 890px) {
+
+             video{
+            position: fixed;
+            display: block;
+            right: 0px;
+            bottom: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+            opacity: 0.86;
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/
+            /*filter:grayscale(100%); //背景灰度设置*/
+            z-index:-11
+        }
+       }
+
+
+
+            .self-bg-gray-dark{
+            background-color: #212427;
+            background-image:linear-gradient(to bottom,#292c2f 0,#191c1f 100%);
+            box-shadow: inset 0 0 0 1px rgba(31,31,31,.66), 0 0 10px rgba(0,0,0,.75), 0 0 10px rgba(0,0,0,.75);
+        }
+               .font-big{
+            font-size: 13px;
+
+        }
+
+
+
+
+
+        source{
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+        }
+
+
+        .bg_login{
+            margin: 5em 0 0   0 ;
+        }
+
+
+        .bg_antiwhite{
+            opacity: 1;
+        }
+
+        p{
+            margin-bottom: 0px;
+        }
+
+          img{
+            cursor: pointer;
+        }
+
+
+
+    </style>
+</head>
+<body class="bg-dark">
+
+<div class="container-fluid">
+
+
+
+
+
+<div id="sider"></div>
+
+
+<div >
+    <div >
+        <div class="d-flex flex-row pt-3 ">
+            <a>
+                <img id="img-rain" class="d-inline-block mx-2 rounded-circle "  src="./video/preview2.jpg">
+            </a>
+            <a>
+                <img id="img-room" class="rounded-circle mx-2 " src="./video/preview1.jpg">
+            </a>
+            <a>
+                <img id='img-girl' class="rounded-circle mx-2" src="./video/preview.jpg">
+            </a>
+            <a>
+                <img id="img-forest"   class="rounded-circle mx-2" src="./video/preview.png">
+            </a>
+        </div>
+
+    </div>
+    <div  class="bg_login ">
+        <div class="  d-flex justify-content-center align-items-center mx-5 " >
+
+            <div class="bg_antiwhite " >
+            <form class="py-5" >
+
+                <div class="my-3">
+                    <p class="text-warning">账号:</p>
+                    <input type="text" class="form-control">
+                </div >
+                <div class="my-3">
+                    <p class="text-warning">密码:</p>
+                    <input type="password" class="form-control">
+                </div>
+
+
+                <div class="btn_div  pt-3">
+                    <a style="margin: 0 0 0 40px"  href="#">登录</a>
+                </div>
+            </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+    <video id="v1"  autoplay muted loop>
+            <source src="video/teste.mp4">
+    </video>
+
+
+
+
+</div>
+</body>
+
+
+<script src="../js/flv.min.js"></script>
+<script src="../js/DPlayer.min.js"></script>
+<script src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../bideo.js"></script>
+<script >
+        $(function () {
+        $('#sider').load('./Navbar-public.html')
+    });
+    $('#img-rain').click(function () {
+        $('#v1')[0].src='video/teste.mp4'
+    });
+    $('#img-forest').click(function () {
+        $('#v1')[0].src='video/Passage To Safety (Compressed With Audio).mp4'
+    });
+    $('#img-room').click(function () {
+        $('#v1')[0].src='video/Cyberpunk 2077 Loading Screen.mp4'
+    });
+    $('#img-girl').click(function () {
+        $('#v1')[0].src='video/2_00_AM.mp4'
+    });
+
+</script>
+
+
+</html>

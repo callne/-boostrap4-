@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/button_light.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link href="../bootstrap-icons.css" rel="stylesheet" type="text/css">
+    <link href="../css/css.css" rel="stylesheet" type="text/css">
+    <style>
+        input[type=checkbox]{
+            visibility: hidden;
+            width: 0;
+            height: 0;
+
+            position: fixed;
+        }
+        label{
+            color: white;
+            display: inline-block;
+            padding: .5rem;
+            text-align: center;
+            background-color: #5e5e5e;
+            background-image: linear-gradient(to bottom,#777 0,#444 100%);
+            border-radius: 3px;
+            outline: black 2px solid;
+            text-shadow: 1px 1px 3px rgba(0,0,0,.75);
+            min-width: 5em;
+            cursor: pointer;
+            margin: 3px 0px 3px 1px;
+        }
+
+
+
+
+        input[type=checkbox]:checked+label{
+          color: white;
+
+        }
+
+        #refresh i::before{
+            content: url("./picture1/刷新.png");
+        }
+        .div_button{
+
+        }
+
+
+        .show_list{
+          position: absolute;
+          top: 80%;
+          left: 15%;
+        }
+
+
+        .show_list ul {
+          list-style: none;
+          width: 1300px;
+          display: flex;flex-direction: row;justify-content: space-around;
+
+        }
+
+        .show_list li{
+          list-style: none;
+          width: 300px;
+          height: 200px;
+          border-radius: 50px;
+
+        }
+
+        .show_list img{
+          list-style: none;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+            	image-rendering:-moz-crisp-edges;
+        image-rendering:-o-crisp-edges;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode:nearest-neighbor;
+
+        }
+
+    </style>
+
+</head>
+<body class="bg-dark" >
+<div class="container-fluid">
+    <div id="sider"></div>
+<!--    <form class="bg-secondary d-flex  align-items-center flex-row justify-content-center " >-->
+
+<!--        <div id="div_button" style="background-color: black;border-radius: 2px" class="mt-2 mb-2 ">-->
+<!--            <input type="checkbox" id="general-checkbox"  >-->
+<!--            <label for="general-checkbox">gengral</label>-->
+<!--            <input type="checkbox" id="nature-checkbox" >-->
+<!--            <label for="nature-checkbox">nature</label>-->
+<!--            <input type="checkbox" id="anime-checkbox" >-->
+<!--            <label for="anime-checkbox">anime</label>-->
+<!--            <input type="checkbox" id="people-checkbox" >-->
+<!--            <label for="people-checkbox">people</label>-->
+<!--        </div>-->
+<!--        <div class="ml-4" >-->
+<!--         <button id="refresh" class="btn" style="box-sizing: content-box;width: 35px;height: 35px"><i></i></button>-->
+<!--        </div>-->
+<!--    </form>-->
+
+  <div style="position: absolute;top: 73%;left: 40%">
+    <input style="color:white"  type="file" id="tupian">
+    <button  class="btn btn-success">提交</button>
+  </div>
+
+<div class="slideshow middle">
+
+  <div class="slides">
+
+    <input type="radio" name="r" id="r1" checked>
+    <input type="radio" name="r" id="r2">
+    <input type="radio" name="r" id="r3">
+    <input type="radio" name="r" id="r4">
+    <input type="radio" name="r" id="r5">
+
+    <div class="slide s1">
+      <img src="./picture1/lunboqi/1.jpg">
+    </div>
+
+    <div class="slide s2">
+      <img src="./picture1/lunboqi/2.jpg">
+    </div>
+
+    <div class="slide s3">
+      <img src="./picture1/lunboqi/3.jpg">
+    </div>
+
+    <div class="slide s4">
+      <img src="./picture1/lunboqi/4.jpg">
+    </div>
+
+    <div class="slide s5">
+      <img src="./picture1/lunboqi/5.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="navigation">
+    <label for="r1" class="bar"></label>
+    <label for="r2" class="bar"></label>
+    <label for="r3" class="bar"></label>
+    <label for="r4" class="bar"></label>
+    <label for="r5"  class="bar"></label>
+  </div>
+
+
+</div>
+
+
+  <div class="show_list" >
+    <ul>
+      <li><img src="picture1/pic_show/1.jpg"></li>
+      <li><img src="picture1/pic_show/2.png"></li>
+      <li><img src="picture1/pic_show/3.png"></li>
+      <li><img src="picture1/pic_show/4.jpg"></li>
+
+    </ul>
+
+
+
+
+  </div>
+
+
+
+
+</div>
+
+</body>
+<script src="../js/flv.min.js"></script>
+<script src="../js/DPlayer.min.js"></script>
+<script src="../js/jquery-3.5.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+    $("#sider").load('./Navbar-public.html');
+</script>
+<script>
+$("#div_button").children("label").click(function (e) {
+    $(e.target).animate({opacity:'0.5'})
+})
+
+${}
+
+</script>

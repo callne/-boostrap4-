@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+.slide img{
+
+
+	image-rendering:-moz-crisp-edges;
+	image-rendering:-o-crisp-edges;
+	image-rendering:-webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode:nearest-neighbor;
+
+
+}
+
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.slideshow{
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+
+
+}
+
+
+/*轮播器滑图按钮 容器*/
+.navigation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+}
+
+/*轮播器滑图按钮*/
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  background: transparent;
+}
+
+/*轮播器滑图按钮触摸时的变化*/
+.bar:hover{
+  background: white;
+}
+
+/*将input按钮隐藏*/
+input[name='r']{
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+
+}
+
+.slide{
+  width: 20%;
+  transition: 1.5s;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+
